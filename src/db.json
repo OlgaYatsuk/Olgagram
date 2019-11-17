@@ -1,0 +1,233 @@
+{
+  "users":
+    {
+      "userId": 1,
+      "name": "Anton",
+      "isOnline": true,
+      "phone": "0939766766",
+      "settings": {
+        "theme": "light",
+        "shareOnlineStatus": false,
+        "sendNotifications": false
+      },
+      "contacts": [
+        {
+          "userId": 1,
+          "name": "Olga",
+          "chatId": 111,
+          "isOnline": true,
+          "phone": "0669000100",
+          "settings": {
+            "theme": "dark",
+            "shareOnlineStatus": false,
+            "sendNotifications": true
+          }
+        },
+        {
+          "userId": 2,
+          "name": "Alex",
+          "isOnline": false,
+          "chatId": 222,
+          "phone": "0501234566",
+          "settings": {
+            "theme": "light",
+            "shareOnlineStatus": false,
+            "sendNotifications": false
+          }
+        },
+        {
+          "userId": 3,
+          "name": "Victor",
+          "isOnline": false,
+          "chatId": 333,
+          "phone": "0446755522",
+          "settings": {
+            "theme": "light",
+            "shareOnlineStatus": false,
+            "sendNotifications": false
+          }
+        },
+        {
+          "userId": 4,
+          "name": "Aaron",
+          "chatId": 444,
+          "isOnline": false,
+          "phone": "0446755522",
+          "settings": {
+            "theme": "light",
+            "shareOnlineStatus": false,
+            "sendNotifications": false
+          }
+        }
+      ]
+    },
+  "chats": [
+    {
+      "isMuted": false,
+      "chatId": 111,
+      "chatWith": "Victor",
+      "messages": [
+        {
+          "senderName": "Evgeniy",
+          "receiverId": 2,
+          "time": "11:01",
+          "text": "Hello, how are you?",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 1,
+          "time": "11:02",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 2,
+          "time": "11:03",
+          "text": "Hello, my dear",
+          "isPinned": "false"
+        }
+      ]
+    },
+    {
+      "isMuted": false,
+      "chatId": 222,
+      "chatWith": "Evgeniy",
+      "isOnline": true,
+      "messages": [
+        {
+          "senderName": "Evgeniy",
+          "receiverId": 2,
+          "time": "11:01",
+          "text": "Bad day, you know...",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 1,
+          "time": "11:02",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 2,
+          "time": "11:03",
+          "text": "Hello, my dear",
+          "isPinned": "false"
+        }
+      ]
+    },
+    {
+      "isMuted": false,
+      "chatId": 333,
+      "chatWith": "Olga",
+      "isOnline": true,
+      "messages": [
+        {
+          "senderName": "Evgeniy",
+          "receiverId": 2,
+          "time": "11:01",
+          "text": "Nice to here that!",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 1,
+          "time": "11:02",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 2,
+          "time": "11:03",
+          "text": "Hello, my dear",
+          "isPinned": "false"
+        }
+      ]
+    },
+    {
+      "isMuted": false,
+      "chatId": 444,
+      "isOnline": false,
+      "chatWith": "Anna",
+      "messages": [
+        {
+          "senderName": "Evgeniy",
+          "receiverId": 2,
+          "time": "11:01",
+          "text": "Are you ok?",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 1,
+          "time": "11:02",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 2,
+          "time": "11:03",
+          "text": "Hello, my dear",
+          "isPinned": "false"
+        }
+      ]
+    },
+    {
+      "isMuted": false,
+      "chatId": 555,
+      "chatWith": "Aaron",
+      "isOnline": true,
+      "messages": [
+        {
+          "senderName": "Evgeniy",
+          "receiverId": 2,
+          "time": "11:01",
+          "text": "never the less",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 1,
+          "time": "11:02",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        },
+        {
+          "senderName": "Anton",
+          "receiverId": 2,
+          "time": "11:03",
+          "text": "Hello, my dear",
+          "isPinned": "false"
+        }
+      ]
+    },
+    {
+      "isMuted": false,
+      "chatId": 666,
+      "chatWith": "Richard",
+      "isOnline": true,
+      "messages": [
+        {
+          "senderName": 1,
+          "receiverId": 5,
+          "time": "11:01",
+          "text": "Hi!",
+          "isPinned": "false"
+        },
+        {
+          "senderName": 5,
+          "receiverId": 1,
+          "time": "11:01",
+          "text": "Hello, my friend",
+          "isPinned": "false"
+        }
+      ]
+    }
+  ]
+}
+
