@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {View, FlatList, SafeAreaView, StyleSheet, Text} from 'react-native';
 import Message from './components/Message'
 import ChatFooter from "./components/ChatFooter";
 import ChatHeader from "./components/ChatHeader/ChatHeader";
@@ -7,11 +7,23 @@ import {sendMessage} from "../../actions/sendMessage";
 import {connect} from "react-redux";
 import {fetchChats} from '../../actions/fetchChats'
 
-class PersonalChatScreen extends Component {
+const keyExtractor = item => item.text.toString();
 
+class PersonalChatScreen extends Component {
   componentDidMount() {
     this.props.fetchChats();
   }
+
+  renderItem = ({item}) => {
+    const {params} = this.props.navigation.state;
+    return (<Message
+        text={item.text}
+        time={item.time}
+        userName={params.userName}
+        sender={item.senderName}
+      />
+    )
+  };
 
   render() {
     const {params} = this.props.navigation.state;
@@ -23,16 +35,12 @@ class PersonalChatScreen extends Component {
           chatName={params.chatName}
         />
         <View style={styles.MessagesWrapper}>
-         {currentChat[0].messages.map((message, index) => {
-             return (<Message
-               key={index}
-               text={message.text}
-               time={message.time}
-               userName={params.userName}
-               sender={message.senderName}
-             />)
-         })}
-       </View>
+          <FlatList
+            data={currentChat[0].messages}
+            renderItem={this.renderItem}
+            keyExtractor={keyExtractor}
+          />
+        </View>
         <ChatFooter
           chatId={params.chatId}
           sendMessage={this.props.sendMessage}

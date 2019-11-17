@@ -30,5 +30,42 @@ class ChatsListScreen extends Component<Props> {
   }
 }
 
+const TabNavigator = createBottomTabNavigator({
+  ContactsScreen: {
+    screen: ContactsScreen,
+    navigationOptions: () => ({
+      tabBarIcon: () => <Image  source={require('../../img/contacts.png')} />,
+      title: 'Contacts',
+    }),
+    tabBarOptions: {
+      activeTintColor: '#d6cae7',
+      tabStyle: {paddingTop: 10}
+    }
+  },
 
-export default ChatsListScreen;
+  Chats: {
+      screen: ChatsListScreen,
+      navigationOptions: () => ({
+        tabBarIcon: () => <Image  source={require('../../img/chat.png')} />,
+        title: 'Chats',
+      }),
+      tabBarOptions: {
+        activeBackgroundColor: '#d6cae7',
+        tabStyle: {paddingTop: 10}
+      }
+    },
+
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: () => ({
+      tabBarIcon: () => <Image  source={require('../../img/user.png')} />,
+      title: 'Profile',
+    }),
+    tabBarOptions: {
+      activeTintColor: '#d6cae7',
+      tabStyle: {paddingTop: 10}
+    }
+  },
+});
+
+export default createAppContainer(TabNavigator);

@@ -15,7 +15,6 @@ import ChatsListScreen from "./src/screens/ChatsListScreen";
 import PersonalChatScreen from "./src/screens/PersonalChatScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
 import ContactsScreen from "./src/screens/ContactsScreen/ContactsScreen";
-import RootTab from "./src/components/RootTab";
 
 const RootStack = createStackNavigator(
   {
@@ -24,9 +23,6 @@ const RootStack = createStackNavigator(
     PersonalChatScreen: PersonalChatScreen,
     ContactsScreen: ContactsScreen,
     ProfileScreen: ProfileScreen,
-    RootTab: {
-      screen: RootTab,
-    },
   },
   {
     initialRouteName: 'AuthenticationScreen',
